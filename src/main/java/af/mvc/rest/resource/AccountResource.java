@@ -2,6 +2,7 @@ package af.mvc.rest.resource;
 
 import af.mvc.entity.Account;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.ResourceSupport;
 
 /**
@@ -20,6 +21,7 @@ public class AccountResource extends ResourceSupport {
 
     @JsonIgnore
     public String getAccountPassword() { return accountPassword; }
+    @JsonProperty
     public void setAccountPassword(String accountPassword) { this.accountPassword = accountPassword; }
 
     public Account toEntity() {
