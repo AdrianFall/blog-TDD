@@ -1,9 +1,15 @@
 package af.mvc.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by Adrian on 06/05/2015.
  */
+@Entity
 public class Account {
+    @Id @GeneratedValue
     private Long id;
     private String name;
     private String password;

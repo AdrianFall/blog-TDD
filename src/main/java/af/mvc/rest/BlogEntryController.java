@@ -1,6 +1,6 @@
 package af.mvc.rest;
 
-import af.af.service.BlogEntryService;
+import af.core.service.BlogEntryService;
 import af.mvc.entity.BlogEntry;
 import af.mvc.rest.resource.BlogEntryResource;
 import af.mvc.rest.resource.asm.BlogEntryResourceAsm;

@@ -1,15 +1,11 @@
 package af.mvc.rest;
 
-import af.af.service.AccountService;
-import af.af.service.BlogEntryService;
-import af.af.service.exception.AccountExistsException;
+import af.core.service.AccountService;
+import af.core.service.exception.AccountExistsException;
 import af.mvc.entity.Account;
-import af.mvc.entity.BlogEntry;
 import af.mvc.rest.exceptions.ConflictException;
 import af.mvc.rest.resource.AccountResource;
-import af.mvc.rest.resource.BlogEntryResource;
 import af.mvc.rest.resource.asm.AccountResourceAsm;
-import af.mvc.rest.resource.asm.BlogEntryResourceAsm;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

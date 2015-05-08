@@ -1,8 +1,7 @@
-package af.af.service;
+package af.core.service;
 
-import af.af.service.exception.AccountExistsException;
+import af.core.service.exception.AccountExistsException;
 import af.mvc.entity.Account;
-import af.mvc.entity.BlogEntry;
 
 /**
  * Created by Adrian on 06/05/2015.

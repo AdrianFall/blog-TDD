@@ -1,4 +1,4 @@
-package af.af.service.exception;
+package af.core.service.exception;
 
 /**
  * Created by Adrian on 06/05/2015.

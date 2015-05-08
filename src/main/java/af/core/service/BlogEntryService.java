@@ -1,4 +1,4 @@
-package af.af.service;
+package af.core.service;
 
 import af.mvc.entity.BlogEntry;
 

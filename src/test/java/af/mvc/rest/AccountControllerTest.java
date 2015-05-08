@@ -1,12 +1,11 @@
-package af.test;
+package af.mvc.rest;
 
 
-import af.af.service.AccountService;
+import af.core.service.AccountService;
 
-import af.af.service.exception.AccountExistsException;
+import af.core.service.exception.AccountExistsException;
 import af.mvc.entity.Account;
 import af.mvc.rest.AccountController;
-import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
@@ -94,8 +93,10 @@ public class AccountControllerTest {
         when(service.createAccount(any(Account.class))).thenReturn(createdAccount);
 
         mockMvc.perform(post("/rest/account")
+                // build content
                 .content("{\"accountName\":\"aj\",\"accountPassword\":\"fall\"}")
                 .contentType(MediaType.APPLICATION_JSON))
+                // operations on the response
                 .andDo(print())
                 .andExpect(header().string("Location", org.hamcrest.Matchers.endsWith("/rest/account/2")))
                 .andExpect(jsonPath("$.accountName", is(createdAccount.getName())))
